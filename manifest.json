@@ -1,0 +1,13 @@
+[
+    {
+        "allowedMemberTypes": [
+            "Application",
+            "User"
+        ],
+        "id": "0566419e-bb95-4d9d-a4f8-ed9a0f147fa6",
+        "description": "Can read the backend API",
+        "displayName": "Api Reader Role",
+        "isEnabled": "true",
+        "value": "apireader"
+    }
+]
