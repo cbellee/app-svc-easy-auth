@@ -1,12 +1,12 @@
 param location string = 'australiaeast'
-param prefix string = 'cbellee-app-oauth-demo'
-param acrName string
 param version string = '0.0.1'
 param backendAppId string
 
-var frontendWebAppName = '${prefix}-fe'
-var backendWebAppName = '${prefix}-be'
-var serverFarmName = '${prefix}-plan'
+var affix = uniqueString(resourceGroup().id)
+var acrName = 'acr${affix}'
+var frontendWebAppName = '${affix}-fe'
+var backendWebAppName = '${affix}-be'
+var serverFarmName = '${affix}-plan'
 var backendUri = 'https://${backendWebApp.properties.defaultHostName}/helloBackend'
 
 resource acr 'Microsoft.ContainerRegistry/registries@2021-06-01-preview' = {
@@ -396,3 +396,5 @@ output acrLoginServer string = acr.properties.loginServer
 output acrPassword string = (listCredentials(acr.id, acr.apiVersion)).passwords[0].value
 output acrId string = acr.id
 output frontendMIObjectId string = frontendWebApp.identity.principalId
+output backEndAppUri string = backendWebApp.properties.defaultHostName
+output frontEndAppUri string = frontendWebApp.properties.defaultHostName

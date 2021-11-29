@@ -3,6 +3,8 @@
 ## pre-requisites
 - Azure subscription
 - Azure CLI
+- Bash shell
+- VS Code (optional) 
 
 ## deploy
 - clone this repo
