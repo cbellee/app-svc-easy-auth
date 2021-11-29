@@ -6,7 +6,7 @@
 - Bash shell
 - VS Code (optional) 
 
-## deploy
+## deployment
 - clone this repo
 - modify /makefile to change the following variables to your desired values
   -  RG_NAME (Resource Group Name)
