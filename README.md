@@ -17,6 +17,6 @@
 - once the deployment is complete, execute the container build & push
   - `$ make build`
 - verify that the frontend can call the backend
-  - `$ curl 6jixdodaa2cco-fe.azurewebsites.net/helloFrontend`
+  - `$ curl <app name>.azurewebsites.net/helloFrontend`
 - verify that the backed app cannot be called directly & returns a 401 (unauthorized) reposnse
-  - `curl 6jixdodaa2cco-be.azurewebsites.net/helloBackend`
+  - `curl <app name>.azurewebsites.net/helloBackend`
