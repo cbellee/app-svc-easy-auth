@@ -4,6 +4,7 @@
 - Azure subscription
 - Azure CLI
 - Bash shell
+- Make
 - VS Code (optional) 
 
 ## deployment
